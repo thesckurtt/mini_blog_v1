@@ -12,13 +12,13 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
-    <link href="{{asset('_dashboard/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{asset('_dashboard/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link href="{{ asset('_dashboard/assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('_dashboard/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="{{asset('_dashboard/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link href="{{ asset('_dashboard/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- CSS Files -->
-    <link id="pagestyle" href="{{asset('_dashboard/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
+    <link id="pagestyle" href="{{ asset('_dashboard/assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -32,38 +32,17 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white"
-                                href="javascript:;">Pages</a></li>
-                        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Dashboard</li>
+                                href="javascript:;">Dashboard</a></li>
+                        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Home</li>
                     </ol>
                     <h6 class="font-weight-bolder text-white mb-0">Dashboard</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                        <div class="input-group">
-                            <span class="input-group-text text-body"><i class="fas fa-search"
-                                    aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" placeholder="Type here...">
-                        </div>
-                    </div>
-                    <ul class="navbar-nav  justify-content-end">
-                        <li class="nav-item d-flex align-items-center">
+                    <ul class="ms-md-auto pe-md-3 navbar-nav justify-content-end">
+                        <li class="nav-item d-flex align-items-center mx-3">
                             <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
                                 <i class="fa fa-user me-sm-1"></i>
-                                <span class="d-sm-inline d-none">Sign In</span>
-                            </a>
-                        </li>
-                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
-                                <div class="sidenav-toggler-inner">
-                                    <i class="sidenav-toggler-line bg-white"></i>
-                                    <i class="sidenav-toggler-line bg-white"></i>
-                                    <i class="sidenav-toggler-line bg-white"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item px-3 d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-white p-0">
-                                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                                <span class="d-sm-inline d-none">{{ auth()->user()->name }}</span>
                             </a>
                         </li>
                         <li class="nav-item dropdown pe-2 d-flex align-items-center">
@@ -77,7 +56,8 @@
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="{{asset('_dashboard/assets/img/team-2.jpg')}}" class="avatar avatar-sm  me-3 ">
+                                                <img src="{{ asset('_dashboard/assets/img/team-2.jpg') }}"
+                                                    class="avatar avatar-sm  me-3 ">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="text-sm font-weight-normal mb-1">
@@ -163,13 +143,13 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Money</p>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Receita Gerada</p>
                                         <h5 class="font-weight-bolder">
-                                            $53,000
+                                            $0,00
                                         </h5>
                                         <p class="mb-0">
-                                            <span class="text-success text-sm font-weight-bolder">+55%</span>
-                                            since yesterday
+                                            <span class="text-success text-sm font-weight-bolder">+0%</span>
+                                            no último mês
                                         </p>
                                     </div>
                                 </div>
@@ -189,13 +169,13 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Users</p>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de visitas</p>
                                         <h5 class="font-weight-bolder">
                                             2,300
                                         </h5>
                                         <p class="mb-0">
                                             <span class="text-success text-sm font-weight-bolder">+3%</span>
-                                            since last week
+                                            desde a última semana
                                         </p>
                                     </div>
                                 </div>
@@ -215,7 +195,7 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">New Clients</p>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Curtidas em posts</p>
                                         <h5 class="font-weight-bolder">
                                             +3,462
                                         </h5>
@@ -241,13 +221,12 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Sales</p>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Receita de vendas</p>
                                         <h5 class="font-weight-bolder">
-                                            $103,430
+                                            R$ 182,00
                                         </h5>
                                         <p class="mb-0">
-                                            <span class="text-success text-sm font-weight-bolder">+5%</span> than last
-                                            month
+                                            <span class="text-success text-sm font-weight-bolder">+5%</span> desde a última semana
                                         </p>
                                     </div>
                                 </div>
@@ -691,11 +670,11 @@
     </div>
 
     <!--   Core JS Files   -->
-    <script src="{{asset('_dashboard/assets/js/core/popper.min.js')}}"></script>
-    <script src="{{asset('_dashboard/assets/js/core/bootstrap.min.js')}}"></script>
-    <script src="{{asset('_dashboard/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
-    <script src="{{asset('_dashboard/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
-    <script src="{{asset('_dashboard/assets/js/plugins/chartjs.min.js')}}"></script>
+    <script src="{{ asset('_dashboard/assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('_dashboard/assets/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('_dashboard/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('_dashboard/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('_dashboard/assets/js/plugins/chartjs.min.js') }}"></script>
     <script>
         var ctx1 = document.getElementById("chart-line").getContext("2d");
 
@@ -791,8 +770,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{asset('_dashboard/assets/js/argon-dashboard.min.js?v=2.0.4')}}"></script>
+    <script src="{{ asset('_dashboard/assets/js/argon-dashboard.min.js?v=2.0.4') }}"></script>
 </body>
 
 </html>
-
