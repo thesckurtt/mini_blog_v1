@@ -1,0 +1,8 @@
+.logo-miniblog-span {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.close-button-aside-bar, .bars-aside-bar{
+    cursor: pointer;
+}
